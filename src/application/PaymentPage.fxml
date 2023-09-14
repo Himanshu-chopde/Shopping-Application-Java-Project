@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PaymentPageController">
+   <top>
+      <Pane prefHeight="120.0" prefWidth="1380.0" style="-fx-background-color: #002288;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="920.0" layoutY="38.0" text="Payment Dashboard" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/payment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="309.0" layoutY="38.0" text="Orders List" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/purchase-order.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="69.0" fitWidth="78.0" layoutX="28.0" layoutY="26.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/backBlue.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="775.0" BorderPane.alignment="CENTER">
+         <content>
+            <TilePane fx:id="tilePane" prefHeight="599.0" prefWidth="766.0" style="-fx-background-color: #FFFFFF;" vgap="30.0">
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="706.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Label layoutX="239.0" layoutY="87.0" text="Your Cart Is Empty" textFill="RED">
+                           <font>
+                              <Font name="SansSerif Regular" size="24.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+               </children>
+            </TilePane>
+         </content>
+      </ScrollPane>
+   </center>
+   <right>
+      <Pane prefHeight="600.0" prefWidth="585.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="radioUPI" layoutX="197.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#showUPIPane" text="UPI">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="197.0" layoutY="174.0" text="Select Payment Option" underline="true">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="radioCard" layoutX="197.0" layoutY="292.0" mnemonicParsing="false" onMouseClicked="#showCardPane" text="Credit/ Debit Card">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioCOD" layoutX="197.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#showCODPane" text="Cash on Delivery">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </RadioButton>
+            <Pane fx:id="paneUPI" layoutX="28.0" layoutY="144.0" prefHeight="400.0" prefWidth="530.0" style="-fx-background-color: #FFFFFF;" visible="false">
+               <children>
+                  <TextField fx:id="textUPI" layoutX="135.0" layoutY="118.0" prefHeight="35.0" prefWidth="271.0" promptText="ID@UPI">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="135.0" layoutY="102.0" text="Enter Your UPI ID :">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="135.0" layoutY="206.0" mnemonicParsing="false" onAction="#payAmountUPI" prefHeight="50.0" prefWidth="271.0" text="Pay">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/pay.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="135.0" layoutY="300.0" mnemonicParsing="false" onAction="#changePaymentMethod" prefHeight="50.0" prefWidth="271.0" text="Change Payment Method">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/change.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children></Pane>
+            <Pane fx:id="paneCard" layoutX="28.0" layoutY="144.0" prefHeight="400.0" prefWidth="530.0" style="-fx-background-color: #FFFFFF;" visible="false">
+               <children>
+                  <TextField fx:id="textCardNumber" layoutX="115.0" layoutY="48.0" prefHeight="35.0" prefWidth="300.0" promptText="000000000000">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="115.0" layoutY="32.0" text="Card Number :">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="135.0" layoutY="257.0" mnemonicParsing="false" onAction="#payAmountCard" prefHeight="35.0" prefWidth="260.0" text="Pay">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/pay.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="130.0" layoutY="336.0" mnemonicParsing="false" onAction="#changePaymentMethod" prefHeight="50.0" prefWidth="271.0" text="Change Payment Method">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/change.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="textCardName" layoutX="115.0" layoutY="110.0" prefHeight="35.0" prefWidth="300.0" promptText="Name">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="118.0" layoutY="94.0" text="Name :">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textCardCvv" layoutX="313.0" layoutY="175.0" prefHeight="35.0" prefWidth="100.0" promptText="000">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="313.0" layoutY="159.0" text="CVV :">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="159.0" text="Expiry Month and Year :">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="spinnerMonth" layoutX="115.0" layoutY="175.0" prefHeight="35.0" prefWidth="80.0" style="-fx-font-size: 16;" />
+                  <Spinner fx:id="spinnerYear" layoutX="207.0" layoutY="175.0" prefHeight="35.0" prefWidth="95.0" style="-fx-font-size: 16;" />
+                  <Label layoutX="195.0" layoutY="170.0" text="/">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="paneCod" layoutX="28.0" layoutY="144.0" prefHeight="400.0" prefWidth="530.0" style="-fx-background-color: #FFFFFF;" visible="false">
+               <children>
+                  <Label layoutX="200.0" layoutY="105.0" text="Pay On Delivery">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="125.0" layoutY="153.0" mnemonicParsing="false" onAction="#placeOrderAction" prefHeight="50.0" prefWidth="271.0" text="Place Order">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/placeOrder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="125.0" layoutY="261.0" mnemonicParsing="false" onAction="#changePaymentMethod" prefHeight="50.0" prefWidth="271.0" text="Change Payment Method">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/change.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Label layoutX="216.0" layoutY="45.0" text="Total Amount" underline="true">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/amount.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="lblAmount" alignment="CENTER" layoutX="145.0" layoutY="89.0" prefHeight="21.0" prefWidth="300.0" text="Total Amount">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="orderPane" layoutX="23.0" layoutY="39.0" prefHeight="525.0" prefWidth="540.0" style="-fx-background-color: #FFFFFF;" visible="false">
+               <children>
+                  <Label layoutX="156.0" layoutY="42.0" text="Ordered Successfully" textFill="RED">
+                     <font>
+                        <Font name="SansSerif Regular" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTimer" alignment="CENTER" layoutX="250.0" layoutY="145.0" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 50 50 50 50;" text="30">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnCancelOrder" layoutX="184.0" layoutY="185.0" mnemonicParsing="false" onAction="#cancelOrderAction" prefHeight="48.0" prefWidth="173.0" text="Cancel Order">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/cancel.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </right>
+</BorderPane>

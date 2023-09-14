@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1363.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerDetailsController">
+   <top>
+      <Pane prefHeight="150.0" prefWidth="1327.0" style="-fx-background-color: #00288C; -fx-background-radius: 50;" BorderPane.alignment="CENTER">
+         <children>
+            <Label graphicTextGap="5.0" layoutX="520.0" layoutY="48.0" text="User Profile" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="SansSerif Bold" size="36.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="79.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/userDetails.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="63.0" fitWidth="65.0" layoutX="91.0" layoutY="44.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/backWhite.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="btnSaveDetails" layoutX="1116.0" layoutY="62.0" mnemonicParsing="false" onAction="#saveDeteailsAction" prefHeight="45.0" prefWidth="81.0" text="Save">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="30.0" right="30.0" />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow height="50.0" radius="24.5" spread="0.2" width="50.0" />
+         </effect>
+      </Pane>
+   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="562.0" prefWidth="1363.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="900.0" prefWidth="1363.0" spacing="40.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Pane prefHeight="400.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
+                     <effect>
+                        <DropShadow height="50.0" radius="24.5" spread="0.2" width="50.0" />
+                     </effect>
+                     <children>
+                        <TextField fx:id="textEmail" editable="false" layoutX="236.0" layoutY="233.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textLastName" layoutX="767.0" layoutY="63.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textFirstName" layoutX="238.0" layoutY="63.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="236.0" layoutY="263.0" />
+                        <Label layoutX="236.0" layoutY="218.0" text="Email">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="48.0" text="First Name">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="767.0" layoutY="48.0" text="Last Name">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textContactNumber" layoutX="765.0" layoutY="233.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textVisibleConfirmPassword" editable="false" layoutX="765.0" layoutY="155.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textVisiblePassword" editable="false" layoutX="236.0" layoutY="155.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="765.0" layoutY="263.0" />
+                        <Label layoutX="765.0" layoutY="218.0" text="Contact Number">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="236.0" layoutY="140.0" text="Password">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="765.0" layoutY="140.0" text="Confirm Password">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textAnswer" layoutX="765.0" layoutY="320.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="765.0" layoutY="350.0" />
+                        <Label layoutX="236.0" layoutY="305.0" text="Security Question">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="765.0" layoutY="305.0" text="Answer">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxSecurityQuestion" layoutX="236.0" layoutY="318.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE; -fx-font-size: 16;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Line endX="300.0" layoutX="236.0" layoutY="351.0" />
+                        <PasswordField fx:id="textInvisiblePassword" layoutX="236.0" layoutY="155.0" onKeyPressed="#echoPassword" onKeyReleased="#echoPassword" onKeyTyped="#echoPassword" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <Line endX="300.0" layoutX="238.0" layoutY="93.0" />
+                        <PasswordField fx:id="textInvisibleConfirmPassword" layoutX="765.0" layoutY="155.0" onKeyPressed="#echoConfirmPassword" onKeyReleased="#echoConfirmPassword" onKeyTyped="#echoConfirmPassword" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <Line endX="300.0" layoutX="767.0" layoutY="93.0" />
+                        <Line endX="300.0" layoutX="236.0" layoutY="185.0" />
+                        <Line endX="300.0" layoutX="765.0" layoutY="185.0" />
+                        <ImageView fx:id="imagePassword" fitHeight="30.0" fitWidth="26.0" layoutX="511.0" layoutY="157.0" onMousePressed="#showHidePassword" onMouseReleased="#showHidePassword" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/hidePassword.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="imageConfirmPassword" fitHeight="30.0" fitWidth="26.0" layoutX="1040.0" layoutY="157.0" onMousePressed="#showHideConfirmPassword" onMouseReleased="#showHideConfirmPassword" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/hidePassword.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label fx:id="lblPasswordError" alignment="TOP_CENTER" layoutX="14.0" layoutY="140.0" prefHeight="120.0" prefWidth="214.0" text="Password must have atleast one lowercase, one uppercase, one numeric and one special character.                                       Password length should be between 8 and 20." textAlignment="JUSTIFY" textFill="RED" visible="false" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="400.0" prefWidth="1200.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
+                     <effect>
+                        <DropShadow height="50.0" radius="24.5" spread="0.2" width="50.0" />
+                     </effect>
+                     <children>
+                        <TextField fx:id="textHouseNumber" layoutX="239.0" layoutY="110.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="239.0" layoutY="140.0" />
+                        <Label layoutX="239.0" layoutY="94.0" text="House Number">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textAreaStreet" layoutX="764.0" layoutY="110.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="764.0" layoutY="140.0" />
+                        <Label layoutX="764.0" layoutY="94.0" text="Area/Street">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textLandmark" layoutX="239.0" layoutY="210.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="239.0" layoutY="240.0" />
+                        <Label layoutX="239.0" layoutY="194.0" text="Landmark">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textCity" layoutX="764.0" layoutY="210.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="764.0" layoutY="240.0" />
+                        <Label layoutX="764.0" layoutY="194.0" text="City">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textPincode" layoutX="239.0" layoutY="312.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="238.0" layoutY="342.0" />
+                        <Label layoutX="238.0" layoutY="296.0" text="Pincode">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="760.0" layoutY="296.0" text="State">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxState" layoutX="760.0" layoutY="310.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE; -fx-font-size: 16;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Line endX="300.0" layoutX="760.0" layoutY="345.0" />
+                        <Label layoutX="603.0" layoutY="29.0" text="Address" textFill="#a1a1a1">
+                           <font>
+                              <Font name="SansSerif Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="25.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

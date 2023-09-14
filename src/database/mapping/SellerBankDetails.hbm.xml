@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="database.tables.SellerBankDetails" table="SellerBankDetails" dynamic-update="true">
+		<id name="email" column="email"></id>
+		
+		<property name="accountNumber"></property>
+		<property name="accountHolderName"></property>
+		<property name="ifscCode"></property>
+		<property name="bankName"></property>
+		<property name="branchName"></property>
+		<property name="pancardNumber"></property>
+		<property name="bankPincode"></property>
+		<property name="bankCity"></property>
+		<property name="bankState"></property>
+		<property name="gstinNumber"></property>
+	</class>
+</hibernate-mapping>

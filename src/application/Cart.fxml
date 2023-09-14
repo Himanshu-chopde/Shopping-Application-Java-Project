@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CartController">
+   <left>
+      <Pane prefHeight="720.0" prefWidth="480.0" style="-fx-background-color: #A4FFF5;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnSaveAddress" layoutX="139.0" layoutY="545.0" mnemonicParsing="false" onAction="#saveAddress" prefHeight="42.0" prefWidth="199.0" text="Save Address">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="116.0" layoutY="14.0" text="Delivery Address" underline="true">
+               <font>
+                  <Font name="SansSerif Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/address.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <TextField fx:id="textFirstName" layoutX="59.0" layoutY="89.0" onMouseClicked="#moveFirstName" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="170.0" layoutX="59.0" layoutY="119.0" />
+            <Label fx:id="lblFirstName" layoutX="66.0" layoutY="96.0" text="First Name">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxState" layoutX="59.0" layoutY="488.0" onMouseClicked="#moveState" prefHeight="30.0" prefWidth="353.0" style="-fx-background-color: #A4FFF5; -fx-font-size: 18;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+            <Label fx:id="lblState" layoutX="66.0" layoutY="499.0" text="State">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <Line endX="350.0" layoutX="59.0" layoutY="522.0" />
+            <TextField fx:id="textLastName" layoutX="239.0" layoutY="89.0" onMouseClicked="#moveLastName" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="170.0" layoutX="239.0" layoutY="119.0" />
+            <Label fx:id="lblLastName" layoutX="246.0" layoutY="96.0" onMouseClicked="#moveLastName" text="Last Name">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textHouseNumber" layoutX="59.0" layoutY="192.0" onMouseClicked="#moveHouseNumber" prefHeight="30.0" prefWidth="350.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="350.0" layoutX="59.0" layoutY="222.0" />
+            <Label fx:id="lblHouseNumber" layoutX="66.0" layoutY="199.0" text="Flat, House no.">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textStreetArea" layoutX="58.0" layoutY="249.0" onMouseClicked="#moveStreetArea" prefHeight="30.0" prefWidth="350.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="350.0" layoutX="58.0" layoutY="279.0" />
+            <Label fx:id="lblStreetArea" layoutX="65.0" layoutY="256.0" text="Area, Street, Village">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textLandmark" layoutX="59.0" layoutY="308.0" onMouseClicked="#moveLandmark" prefHeight="30.0" prefWidth="350.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="350.0" layoutX="59.0" layoutY="338.0" />
+            <Label fx:id="lblLandmark" layoutX="66.0" layoutY="315.0" text="Landmark">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textPincode" layoutX="59.0" layoutY="369.0" onMouseClicked="#movePincode" prefHeight="30.0" prefWidth="350.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="350.0" layoutX="59.0" layoutY="399.0" />
+            <Label fx:id="lblPincode" layoutX="66.0" layoutY="376.0" text="Pincode">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textCity" layoutX="59.0" layoutY="431.0" onMouseClicked="#moveCity" prefHeight="30.0" prefWidth="350.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="350.0" layoutX="59.0" layoutY="461.0" />
+            <Label fx:id="lblCity" layoutX="66.0" layoutY="438.0" text="Town/City">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textPhoneNumber" layoutX="60.0" layoutY="140.0" onMouseClicked="#movePhoneNumber" prefHeight="30.0" prefWidth="350.0" style="-fx-background-color: #A4FFF5;">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="350.0" layoutX="60.0" layoutY="170.0" />
+            <Label fx:id="lblPhoneNumber" layoutX="66.0" layoutY="147.0" text="Phone Number">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </left>
+   <top>
+      <Pane prefHeight="104.0" prefWidth="1380.0" style="-fx-background-color: #00288C;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgBack" fitHeight="70.0" fitWidth="65.0" layoutX="26.0" layoutY="20.0" onMouseReleased="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/backBlue.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="676.0" layoutY="15.0" text="Cart" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="64.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="544.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/shoppingCart.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCheckout" layoutX="1100.0" layoutY="31.0" mnemonicParsing="false" onAction="#proceedToCheckout" prefHeight="50.0" prefWidth="239.0" text="Proceed to Checkout">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/checkout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></Pane>
+   </top>
+   <center>
+      <ScrollPane focusTraversable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <TilePane fx:id="tilePane" hgap="30.0" prefHeight="600.0" prefWidth="885.0" style="-fx-background-color: #FFFFFF;" vgap="30.0">
+               <children>
+                  <Pane fx:id="emptyPane" prefHeight="267.0" prefWidth="381.0" style="-fx-background-color: #FFFFFF;">
+                     <TilePane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </TilePane.margin>
+                     <children>
+                        <Label layoutX="99.0" layoutY="99.0" text="Your Cart Is Empty" textFill="RED">
+                           <font>
+                              <Font name="SansSerif Regular" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;">
+                     <TilePane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </TilePane.margin>
+                  </Pane>
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;">
+                     <TilePane.margin>
+                        <Insets bottom="13.0" left="13.0" right="13.0" top="13.0" />
+                     </TilePane.margin>
+                  </Pane>
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;">
+                     <TilePane.margin>
+                        <Insets bottom="13.0" left="13.0" right="13.0" top="13.0" />
+                     </TilePane.margin>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="30.0" right="20.0" top="20.0" />
+               </padding>
+            </TilePane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

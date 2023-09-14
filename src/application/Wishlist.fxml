@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WishlistController">
+   <top>
+      <Pane prefHeight="150.0" prefWidth="1380.0" style="-fx-background-color: #002288;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="649.0" layoutY="48.0" text="Wishlist" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="SansSerif Bold" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="103.0" fitWidth="100.0" layoutX="541.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/wishlistbig.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="81.0" fitWidth="100.0" layoutX="14.0" layoutY="35.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/backBlue.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children></Pane>
+   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <TilePane fx:id="tilePane" hgap="40.0" prefHeight="565.0" prefWidth="1378.0" style="-fx-background-color: #99FFBB;" vgap="44.0">
+               <children>
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;">
+                     <TilePane.margin>
+                        <Insets />
+                     </TilePane.margin>
+                  </Pane>
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" />
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" />
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" />
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" />
+                  <Pane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;" />
+               </children>
+               <padding>
+                  <Insets bottom="44.0" left="44.0" right="44.0" top="44.0" />
+               </padding>
+            </TilePane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

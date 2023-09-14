@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="706.0" spacing="10.0" style="-fx-background-color: #884488; -fx-border-color: #0000FF; -fx-border-width: 3 3 3 3; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ShowOrderProductController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="225.0" fitWidth="225.0" pickOnBounds="true">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <image>
+            <Image url="@../../../productimages/watch1.jpg" />
+         </image>
+      </ImageView>
+      <VBox prefHeight="224.0" prefWidth="452.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label fx:id="lblHeading" prefHeight="157.0" prefWidth="445.0" text="Label" wrapText="true">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="67.0" prefWidth="445.0" style="-fx-background-color: #CCFFAA;">
+               <children>
+                  <Label layoutY="10.0" text="Price :" textFill="#a10606">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="40.0" text="MRP :" textFill="#448190">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="147.0" layoutY="11.0" text="Delivery :">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="49.0" layoutY="9.0" prefHeight="25.0" prefWidth="15.0" text="₹" textFill="#a10606" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNewPrice" layoutX="60.0" layoutY="9.0" prefHeight="25.0" prefWidth="86.0" text="1000" textFill="#a10606" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="lblOldPrice" fill="#448190" layoutX="54.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2000" wrappingWidth="100.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Label alignment="CENTER" layoutX="42.0" layoutY="37.0" prefHeight="25.0" prefWidth="15.0" text="₹" textFill="#448190" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDeliveryCharges" layoutX="213.0" layoutY="14.0" prefHeight="16.0" prefWidth="86.0" text="+₹5000" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="147.0" layoutY="39.0" text="Quantity :">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblQuantity" layoutX="220.0" layoutY="40.0" text="Quantity">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBrand" layoutX="309.0" layoutY="23.0" text="Brand Name" textFill="#0400ff">
+                     <font>
+                        <Font name="SansSerif Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

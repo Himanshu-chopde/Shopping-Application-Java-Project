@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/java_shopping_app</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Himanshu@15</property>
+		
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+		
+		<mapping resource="database/mapping/SellerLogin.hbm.xml"/>
+		<mapping resource="database/mapping/CustomerLogin.hbm.xml"/>
+		<mapping resource="database/mapping/ProductCategory.hbm.xml"/>
+		<mapping resource="database/mapping/ProductList.hbm.xml"/>
+		<mapping resource="database/mapping/CustomerCart.hbm.xml"/>
+		<mapping resource="database/mapping/CustomerWishlist.hbm.xml"/>
+		<mapping resource="database/mapping/CustomerAddress.hbm.xml"/>
+		<mapping resource="database/mapping/CustomerOrders.hbm.xml"/>
+		<mapping resource="database/mapping/ReturnedProducts.hbm.xml"/>
+		<mapping resource="database/mapping/SellerAddress.hbm.xml"/>
+		<mapping resource="database/mapping/SellerBankDetails.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

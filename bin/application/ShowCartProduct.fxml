@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="mainVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="400.0" style="-fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10; -fx-background-color: #FFFCA4; -fx-border-color: #FF7700; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ShowCartProductController">
+   <children>
+      <HBox prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #FFFCA4; -fx-background-radius: 10 10 10 10;">
+         <children>
+            <ImageView fx:id="image" fitHeight="193.0" fitWidth="189.0" pickOnBounds="true">
+               <HBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../productimages/mobile1.jpg" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="193.0" prefWidth="174.0" style="-fx-background-color: #FFFFFF;">
+               <HBox.margin>
+                  <Insets right="15.0" top="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label fx:id="lblNewPrice" layoutX="71.0" layoutY="18.0" prefHeight="25.0" prefWidth="93.0" text="1000" textFill="#a10606" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="60.0" layoutY="18.0" prefHeight="25.0" prefWidth="15.0" text="₹" textFill="#a10606" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="lblOldPrice" fill="#5ea9bc" layoutX="73.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2000" wrappingWidth="100.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lblDeliveryCharges" layoutX="117.0" layoutY="78.0" prefHeight="16.0" prefWidth="55.0" text="+₹5000" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRating" layoutX="14.0" layoutY="101.0" prefHeight="15.0" prefWidth="93.0" text="Rating: 3.4">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="17.0" prefHeight="25.0" prefWidth="55.0" text="Price :" textFill="#a10606">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="47.0" prefHeight="27.0" prefWidth="55.0" text="MRP  :" textFill="#5ea9bc">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="60.0" layoutY="48.0" prefHeight="25.0" prefWidth="15.0" text="₹" textFill="#5ea9bc" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="76.0" prefHeight="16.0" prefWidth="107.0" text="Delivery Charges :">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBrand" layoutX="7.0" layoutY="130.0" prefHeight="25.0" prefWidth="160.0" text="Product Brand" textFill="#0400eb">
+                     <font>
+                        <Font name="SansSerif Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCategory" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="175.0" prefHeight="16.0" prefWidth="160.0" text="category product">
+                     <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="7.0" layoutY="160.0" prefHeight="16.0" prefWidth="160.0" text="Product Category:">
+                     <font>
+                        <Font name="SansSerif Regular" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="paneStar" layoutX="85.0" layoutY="97.0" prefHeight="25.0" prefWidth="80.0">
+                     <children>
+                        <Label fx:id="lbl1Star" prefHeight="16.0" prefWidth="16.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl2Star" layoutX="16.0" prefHeight="16.0" prefWidth="16.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl3Star" layoutX="32.0" prefHeight="16.0" prefWidth="16.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl4Star" layoutX="48.0" prefHeight="16.0" prefWidth="16.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl5Star" layoutX="64.0" prefHeight="16.0" prefWidth="16.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Label fx:id="lblHeading" alignment="CENTER" contentDisplay="CENTER" prefHeight="115.0" prefWidth="383.0" style="-fx-background-color: #FFFFFF;" text="boAt Wave Call 2 Smart Watch with 1.83&quot; HD Display, Advanced BT Calling, DIY Watch Face Studio, Coins, 700+Active Modes, Live Cricket Scores, HR&amp;SPO2 and Sleep Monitoring(Active Black)" textAlignment="CENTER" wrapText="true">
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </VBox.margin>
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="43.0" prefWidth="394.0" style="-fx-background-color: #FFFFFF;">
+         <VBox.margin>
+            <Insets bottom="10.0" left="15.0" right="15.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="btnRemove" layoutX="146.0" layoutY="4.0" mnemonicParsing="false" onAction="#removeProduct" prefHeight="35.0" prefWidth="100.0" style="-fx-font-size: 13;" text="Remove">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMinus" layoutX="246.0" layoutY="4.0" mnemonicParsing="false" onAction="#decreaseProductCount" prefHeight="35.0" prefWidth="34.0" text="-">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnPlus" layoutX="329.0" layoutY="4.0" mnemonicParsing="false" onAction="#increaseProductCount" prefHeight="35.0" prefWidth="23.0" text="+">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="lblProductCount" alignment="CENTER" layoutX="280.0" prefHeight="43.0" prefWidth="49.0" text="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAddToWishlist" layoutY="4.0" mnemonicParsing="false" onAction="#addToWishlist" prefHeight="35.0" prefWidth="147.0" style="-fx-font-size: 12;" text="Add To Wishlist">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/addToWishlist.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="SansSerif Regular" size="11.0" />
+               </font></Button>
+            <Label fx:id="lblOutOfStock" alignment="CENTER" layoutX="246.0" prefHeight="42.0" prefWidth="118.0" style="-fx-background-color: #FFFFFF;" text="Out of Stock" textFill="RED" visible="false">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow height="38.59" radius="18.6725" spread="0.14" width="38.1" />
+   </effect>
+</VBox>

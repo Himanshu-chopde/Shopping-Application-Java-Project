@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="database.tables.ProductList" table="ProductList" dynamic-update="true">
+		<id name="productId" column="productId"></id>
+		
+		<property name="title" column="title"></property>
+		<property name="newPrice" column="newPrice"></property>
+		<property name="oldPrice" column="oldPrice"></property>
+		<property name="deliveryCharge" column="deliveryCharge"></property>
+		<property name="brand" column="brand"></property>
+		<property name="category" column="category"></property>
+		<property name="description" column="description"></property>
+		<property name="imageExtension" column="imageExtension"></property>
+		<property name="quantity" column="quantity"></property>
+		<property name="rating" column="rating"></property>
+	</class>
+</hibernate-mapping>

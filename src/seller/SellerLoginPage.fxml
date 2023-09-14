@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1380.0" style="-fx-background-color: #222666;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seller.SellerLoginPageController">
+   <children>
+      <Pane fx:id="loginPane" layoutX="290.0" layoutY="110.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ffffff; -fx-border-color: #00FFEE; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20; -fx-border-width: 3;">
+         <children>
+            <Label layoutX="229.0" layoutY="123.0" text="Email">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textEmailLogin" focusTraversable="false" layoutX="229.0" layoutY="138.0" prefHeight="40.0" prefWidth="340.0" promptText="Email">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnLogin" layoutX="337.0" layoutY="331.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="40.0" prefWidth="124.0" text="Login">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <PasswordField fx:id="textHidePassword" layoutX="229.0" layoutY="210.0" onKeyPressed="#passwordToText" onKeyReleased="#passwordToText" onKeyTyped="#passwordToText" prefHeight="40.0" prefWidth="300.0" promptText="Password">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="229.0" layoutY="195.0" text="Password">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSignup" layoutX="170.0" layoutY="331.0" mnemonicParsing="false" onAction="#openSignupPane" prefHeight="40.0" prefWidth="124.0" text="Register">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/register.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="507.0" layoutY="331.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="124.0" text="Exit">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnForgot" layoutX="322.0" layoutY="288.0" mnemonicParsing="false" onAction="#forgotPasswordAction" prefHeight="32.0" prefWidth="155.0" text="Forgot Password">
+               <font>
+                  <Font name="SansSerif Italic" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/forgotPassword.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="textShowPassword" layoutX="229.0" layoutY="210.0" onKeyPressed="#textToPassword" onKeyReleased="#textToPassword" onKeyTyped="#textToPassword" prefHeight="40.0" prefWidth="300.0" promptText="Password" visible="false">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="297.0" layoutY="44.0" text="Seller Login" textFill="#5a44da" underline="true">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btnHome" fitHeight="40.0" fitWidth="61.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/backBlue.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ToggleButton fx:id="btnShowPassword" layoutX="529.0" layoutY="210.0" mnemonicParsing="false" onAction="#showPasswordAction" prefHeight="40.0" prefWidth="42.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #A9AFBE; -fx-border-radius: 0 4 4 0;">
+               <graphic>
+                  <ImageView fx:id="imgShowPassword" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/showPassword.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+         </children>
+      </Pane>
+      <Pane fx:id="signupPane" layoutX="430.0" layoutY="50.0" prefHeight="620.0" prefWidth="550.0" rotate="180.0" style="-fx-background-color: #ffffff; -fx-border-color: #00FFEE; -fx-background-radius: 20 20 20 20; -fx-border-radius: 20 20 20 20; -fx-border-width: 3;" visible="false">
+         <children>
+            <Button fx:id="btnLoginPane" layoutX="58.0" layoutY="512.0" mnemonicParsing="false" onAction="#openLoginPane" prefHeight="40.0" prefWidth="124.0" text="Login">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/login.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="115.0" layoutY="26.0" text="Seller Registration" textFill="#5a44da" underline="true">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="18.0" layoutY="14.0" onMouseClicked="#backToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/backBlue.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <TextField fx:id="textFirstNameR" layoutX="81.0" layoutY="120.0" prefHeight="33.0" prefWidth="198.0" promptText="First Name">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="81.0" layoutY="105.0" text="First Name">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textLastNameR" layoutX="283.0" layoutY="120.0" prefHeight="33.0" prefWidth="198.0" promptText="Last Name">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="283.0" layoutY="105.0" text="Last Name">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textEmailR" layoutX="81.0" layoutY="174.0" prefHeight="33.0" prefWidth="400.0" promptText="Email">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="81.0" layoutY="159.0" text="Email">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textContactNumberR" layoutX="81.0" layoutY="228.0" prefHeight="33.0" prefWidth="400.0" promptText="Contact Number">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="81.0" layoutY="213.0" text="Contact Number">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textShowPassword2" layoutX="81.0" layoutY="281.0" onKeyPressed="#textToPassword2" onKeyReleased="#textToPassword2" onKeyTyped="#textToPassword2" prefHeight="34.0" prefWidth="360.0" promptText="Password">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="81.0" layoutY="266.0" text="Password">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="319.0" text="Confirm Password">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textAnswerR" layoutX="81.0" layoutY="440.0" prefHeight="33.0" prefWidth="400.0" promptText="Answer">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="81.0" layoutY="425.0" text="Answer">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="372.0" text="Security Question">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="textHidePassword2" layoutX="81.0" layoutY="281.0" onKeyPressed="#passwordToText2" onKeyReleased="#passwordToText2" onKeyTyped="#passwordToText2" prefHeight="34.0" prefWidth="360.0" promptText="Password">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </PasswordField>
+            <ToggleButton fx:id="btnShowPassword2" layoutX="439.0" layoutY="281.0" mnemonicParsing="false" onAction="#showPasswordAction2" prefHeight="34.0" prefWidth="42.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #A9AFBE; -fx-border-radius: 0 4 4 0;">
+               <graphic>
+                  <ImageView fx:id="imgShowPassword2" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/showPassword.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <ComboBox fx:id="comboBoxSecurityQuestionRegister" layoutX="81.0" layoutY="387.0" prefHeight="33.0" prefWidth="400.0" promptText="Select Security Question" style="-fx-font-size: 15;" />
+            <Button fx:id="btnRegister" layoutX="213.0" layoutY="512.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="40.0" prefWidth="124.0" text="Register">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/register.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnlogin2" layoutX="367.0" layoutY="512.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="124.0" text="Exit">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <PasswordField fx:id="textConfirmPasswordR" layoutX="81.0" layoutY="334.0" onKeyPressed="#passwordToText2" onKeyReleased="#passwordToText2" onKeyTyped="#passwordToText2" prefHeight="34.0" prefWidth="400.0" promptText="Confirm Password">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </PasswordField>
+            <TextArea fx:id="textValidPassword2" editable="false" focusTraversable="false" layoutX="81.0" layoutY="188.0" prefHeight="94.0" prefWidth="361.0" style="-fx-text-fill: #FF0000;" text="Must have atleast one uppercase character.&#10;Must have atleast one lowercase character.&#10;Must have atleast one numeric character.&#10;Must have atleast one special character [@#$%^&amp;*+=].&#10;Password length should be between 8 and 20." visible="false">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+         <rotationAxis>
+            <Point3D y="1.0" />
+         </rotationAxis>
+      </Pane>
+      <Pane fx:id="paneForgotPassword" layoutX="290.0" layoutY="110.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ffffff; -fx-border-color: #00FFEE; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20; -fx-border-width: 3;" visible="false">
+         <children>
+            <Label layoutX="134.0" layoutY="151.0" prefHeight="21.0" prefWidth="164.0" text="Email ID                 :">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textEmailForgot" focusTraversable="false" layoutX="304.0" layoutY="141.0" prefHeight="40.0" prefWidth="353.0" promptText="Email">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="134.0" layoutY="223.0" text="Security Question  :">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBack" layoutX="171.0" layoutY="380.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="122.0" text="Back">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/backBlue.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="508.0" layoutY="380.0" mnemonicParsing="false" onAction="#okButtonAction" prefHeight="40.0" prefWidth="122.0" text="Ok">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/ok.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="253.0" layoutY="45.0" text="Forgot Password" textFill="#5a44da" underline="true">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textAnswerForgot" focusTraversable="false" layoutX="304.0" layoutY="281.0" prefHeight="40.0" prefWidth="353.0" promptText="Answer">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="134.0" layoutY="290.0" text="Answer                  :">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxSecurityQuestionForgotPassword" layoutX="304.0" layoutY="214.0" prefHeight="40.0" prefWidth="353.0" promptText="Security Question" style="-fx-font-size: 16;" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneResetPassword" layoutX="290.0" layoutY="110.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ffffff; -fx-border-color: #00FFEE; -fx-border-radius: 20 20 20 20; -fx-background-radius: 20 20 20 20; -fx-border-width: 3;" visible="false">
+         <children>
+            <Label layoutX="119.0" layoutY="170.0" prefHeight="21.0" prefWidth="164.0" text="New Password       :">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBack1" layoutX="171.0" layoutY="339.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="122.0" text="Back">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/backBlue.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="508.0" layoutY="339.0" mnemonicParsing="false" onAction="#resetPasswordAction" prefHeight="40.0" prefWidth="122.0" text="Reset">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/resetPassword.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="261.0" layoutY="46.0" text="Reset Password" textFill="#5a44da" underline="true">
+               <font>
+                  <Font name="SansSerif Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="239.0" text="Confirm Password  :">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="textHidePassword1" layoutX="294.0" layoutY="163.0" onKeyPressed="#passwordToText1" onKeyReleased="#passwordToText1" onKeyTyped="#passwordToText1" prefHeight="40.0" prefWidth="321.0" promptText="New Password">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="textShowPassword1" layoutX="294.0" layoutY="163.0" onKeyPressed="#textToPassword1" onKeyReleased="#textToPassword1" onKeyTyped="#textToPassword1" prefHeight="40.0" prefWidth="321.0" promptText="New Password" visible="false">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="textConfirmPassword1" layoutX="294.0" layoutY="230.0" prefHeight="40.0" prefWidth="360.0" promptText="Confirm Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <ToggleButton fx:id="btnShowPassword1" layoutX="615.0" layoutY="163.0" mnemonicParsing="false" onAction="#showPasswordAction1" prefHeight="40.0" prefWidth="42.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #A9AFBE; -fx-border-radius: 0 4 4 0;">
+               <graphic>
+                  <ImageView fx:id="imgShowPassword1" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/showPassword.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+            <TextArea fx:id="textValidPassword1" editable="false" focusTraversable="false" layoutX="294.0" layoutY="203.0" prefHeight="94.0" prefWidth="361.0" style="-fx-text-fill: #FF0000;" text="Must have atleast one uppercase character.&#10;Must have atleast one lowercase character.&#10;Must have atleast one numeric character.&#10;Must have atleast one special character [@#$%^&amp;*+=].&#10;Password length should be between 8 and 20." visible="false">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

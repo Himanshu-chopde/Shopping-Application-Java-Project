@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1363.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seller.SellerDetailsController">
+   <top>
+      <Pane prefHeight="200.0" prefWidth="1363.0" style="-fx-background-color: #509CEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label graphicTextGap="10.0" layoutX="540.0" layoutY="22.0" text="Seller Details" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="SansSerif Bold" size="36.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="66.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/userDetails.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="81.0" fitWidth="105.0" layoutX="34.0" onMouseClicked="#back" pickOnBounds="true">
+               <image>
+                  <Image url="@../icons/Back2.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="btnsave" layoutX="1215.0" layoutY="25.0" mnemonicParsing="false" onAction="#saveDetailsAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-border-radius: 15;" text="Save" visible="false">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" layoutX="32.0" layoutY="-80.0" prefHeight="600.0" prefWidth="1300.0" vvalue="1.0">
+               <content>
+                  <Pane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #FFFFFF;">
+                     <effect>
+                        <DropShadow height="100.0" radius="49.5" spread="0.2" width="100.0" />
+                     </effect>
+                     <children>
+                        <TextField fx:id="textEmail" editable="false" layoutX="132.0" layoutY="61.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textLastName" editable="false" layoutX="932.0" layoutY="61.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textFirstName" editable="false" layoutX="532.0" layoutY="61.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="132.0" layoutY="91.0" />
+                        <Label layoutX="132.0" layoutY="46.0" text="Email">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="46.0" text="First Name">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="46.0" text="Last Name">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textContactNumber" editable="false" layoutX="132.0" layoutY="129.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textVisibleConfirmPassword" editable="false" layoutX="932.0" layoutY="129.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textVisiblePassword" editable="false" layoutX="532.0" layoutY="129.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="132.0" layoutY="159.0" />
+                        <Label layoutX="132.0" layoutY="114.0" text="Contact Number">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="114.0" text="Password">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="114.0" text="Confirm Password">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textGSTINNumber" editable="false" layoutX="932.0" layoutY="199.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textAnswer" editable="false" layoutX="532.0" layoutY="199.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="932.0" layoutY="229.0" />
+                        <Line endX="300.0" layoutX="532.0" layoutY="229.0" />
+                        <Label layoutX="132.0" layoutY="184.0" text="Security Question">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="184.0" text="Answer">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="184.0" text="GST IN Number">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxSecurityQuestion" layoutX="132.0" layoutY="197.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE; -fx-font-size: 16;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label layoutX="14.0" layoutY="14.0" text="Basic Details:" textFill="#a1a1a1">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textAccountNumber" editable="false" layoutX="132.0" layoutY="309.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textIFSCCode" editable="false" layoutX="932.0" layoutY="309.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textAccountHolderName" editable="false" layoutX="532.0" layoutY="309.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="132.0" layoutY="339.0" />
+                        <Line endX="300.0" layoutX="932.0" layoutY="339.0" />
+                        <Line endX="300.0" layoutX="532.0" layoutY="339.0" />
+                        <Label layoutX="132.0" layoutY="294.0" text="Account Number">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="294.0" text="Account Holder Name">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="294.0" text="IFSC Code">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textBankName" editable="false" layoutX="132.0" layoutY="377.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textPancardNumber" editable="false" layoutX="932.0" layoutY="377.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textBranchName" editable="false" layoutX="532.0" layoutY="377.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="132.0" layoutY="407.0" />
+                        <Line endX="300.0" layoutX="932.0" layoutY="407.0" />
+                        <Line endX="300.0" layoutX="532.0" layoutY="407.0" />
+                        <Label layoutX="132.0" layoutY="362.0" text="Bank Name">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="362.0" text="Branch Name">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="362.0" text="Pancard Number">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textBankPincode" editable="false" layoutX="132.0" layoutY="447.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textBankCity" editable="false" layoutX="532.0" layoutY="447.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="132.0" layoutY="479.0" />
+                        <Line endX="300.0" layoutX="532.0" layoutY="477.0" />
+                        <Label layoutX="132.0" layoutY="432.0" text="Location Pincode">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="432.0" text="City">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="432.0" text="State">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxBankState" layoutX="932.0" layoutY="445.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE; -fx-font-size: 16;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label layoutX="12.0" layoutY="264.0" text="Bank Account Details:" textFill="#a1a1a1">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="250.0" prefHeight="5.0" prefWidth="1200.0" />
+                        <Label fx:id="lblEditBasicDetails" layoutX="1237.0" layoutY="17.0" onMouseClicked="#editBasicDetailsAction" text="Edit" underline="true">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="lblEditBankDetails" layoutX="1237.0" layoutY="267.0" onMouseClicked="#editBankDetailsAction" text="Edit" underline="true">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <TextField fx:id="textHouseNumber" editable="false" layoutX="132.0" layoutY="559.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textLandmark" editable="false" layoutX="932.0" layoutY="559.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textAreaStreet" editable="false" layoutX="532.0" layoutY="559.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="132.0" layoutY="589.0" />
+                        <Line endX="300.0" layoutX="932.0" layoutY="589.0" />
+                        <Line endX="300.0" layoutX="532.0" layoutY="589.0" />
+                        <Label layoutX="132.0" layoutY="544.0" text="House Number">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="544.0" text="Area/Street">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="544.0" text="Landmark">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textPincode" editable="false" layoutX="132.0" layoutY="627.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textCity" editable="false" layoutX="532.0" layoutY="627.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="300.0" layoutX="132.0" layoutY="657.0" />
+                        <Line endX="300.0" layoutX="532.0" layoutY="657.0" />
+                        <Label layoutX="132.0" layoutY="612.0" text="Pincode">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="532.0" layoutY="612.0" text="City">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="932.0" layoutY="612.0" text="State">
+                           <font>
+                              <Font name="SansSerif Regular" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBoxState" layoutX="932.0" layoutY="625.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE; -fx-font-size: 16;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ComboBox>
+                        <Label layoutX="12.0" layoutY="514.0" text="Address:" textFill="#a1a1a1">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="50.0" layoutY="500.0" prefHeight="5.0" prefWidth="1200.0" />
+                        <Label fx:id="lblEditAddress" layoutX="1237.0" layoutY="517.0" onMouseClicked="#editAddressAction" text="Edit" underline="true">
+                           <font>
+                              <Font name="SansSerif Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Line endX="300.0" layoutX="932.0" layoutY="657.0" />
+                        <Line endX="300.0" layoutX="932.0" layoutY="477.0" />
+                        <Line endX="300.0" layoutX="132.0" layoutY="230.0" />
+                        <PasswordField fx:id="textInvisiblePassword" editable="false" layoutX="532.0" layoutY="129.0" onKeyPressed="#echoPassword" onKeyReleased="#echoPassword" onKeyTyped="#echoPassword" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <Line endX="300.0" layoutX="532.0" layoutY="91.0" />
+                        <PasswordField fx:id="textInvisibleConfirmPassword" editable="false" layoutX="932.0" layoutY="129.0" onKeyPressed="#echoConfirmPassword" onKeyReleased="#echoConfirmPassword" onKeyTyped="#echoConfirmPassword" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #EEEEEE;">
+                           <font>
+                              <Font name="SansSerif Regular" size="16.0" />
+                           </font>
+                        </PasswordField>
+                        <Line endX="300.0" layoutX="932.0" layoutY="91.0" />
+                        <Line endX="300.0" layoutX="532.0" layoutY="159.0" />
+                        <Line endX="300.0" layoutX="932.0" layoutY="159.0" />
+                        <ImageView fx:id="imagePassword" fitHeight="30.0" fitWidth="26.0" layoutX="807.0" layoutY="131.0" onMousePressed="#showHidePassword" onMouseReleased="#showHidePassword" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/hidePassword.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="imageConfirmPassword" fitHeight="30.0" fitWidth="26.0" layoutX="1207.0" layoutY="131.0" onMousePressed="#showHideConfirmPassword" onMouseReleased="#showHideConfirmPassword" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/hidePassword.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label fx:id="lblBasicDetailsError" layoutX="142.0" layoutY="15.0" prefHeight="20.0" prefWidth="1081.0" textFill="RED">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblBankDetailsError" layoutX="211.0" layoutY="265.0" prefHeight="20.0" prefWidth="689.0" textFill="RED">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblAddressError" layoutX="100.0" layoutY="515.0" prefHeight="20.0" prefWidth="823.0" textFill="RED">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+               <effect>
+                  <DropShadow height="100.0" radius="49.5" spread="0.2" width="100.0" />
+               </effect>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

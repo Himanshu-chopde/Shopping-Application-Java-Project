@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="database.tables.CustomerOrders" table="CustomerOrders" dynamic-update="true">
+		<id name="orderId" column="orderId" unsaved-value="null">
+			<generator class="identity"/>
+		</id>
+		
+		<property name="email"></property>
+		<property name="productId"></property>
+		<property name="productQuantity"></property>
+		<property name="isDelivered"></property>
+		<property name="orderDate"></property>
+		<property name="rating"></property>
+		
+	</class>
+</hibernate-mapping>

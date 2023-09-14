@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping>
+	<class name="database.tables.SellerAddress" table="SellerAddress" dynamic-update="true">
+		<id name="email" column="email"></id>
+		
+		<property name="houseNumber" column="houseNumber"></property>
+		<property name="areaStreet" column="areaStreet"></property>
+		<property name="landmark" column="landmark"></property>
+		<property name="pincode" column="pincode"></property>
+		<property name="city" column="city"></property>
+		<property name="state" column="state"></property>
+	</class>
+</hibernate-mapping>

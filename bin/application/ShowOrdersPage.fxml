@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="600.0" style="-fx-background-color: #FFFAAA; -fx-border-color: #999000; -fx-border-width: 5 5 5 5; -fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ShowOrdersPageController">
+   <children>
+      <HBox prefHeight="290.0" prefWidth="580.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <ImageView fx:id="productImage" fitHeight="290.0" fitWidth="290.0" onMouseClicked="#openReturnPageAction" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../productimages/mobile.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Pane prefHeight="290.0" prefWidth="285.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="lblNewPrice" layoutX="78.0" layoutY="86.0" prefHeight="25.0" prefWidth="93.0" text="1000" textFill="#a10606" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="65.0" layoutY="86.0" prefHeight="25.0" prefWidth="15.0" text="₹" textFill="#a10606" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="lblOldPrice" fill="#5ea9bc" layoutX="75.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2000" wrappingWidth="100.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lblDeliveryCharges" layoutX="150.0" layoutY="142.0" prefHeight="16.0" prefWidth="55.0" text="+₹5000" textAlignment="CENTER">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="165.0" prefHeight="20.0" prefWidth="72.0" text="Quantity :">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="85.0" prefHeight="25.0" prefWidth="55.0" text="Price :" textFill="#a10606">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="112.0" prefHeight="27.0" prefWidth="55.0" text="MRP  :" textFill="#5ea9bc">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="60.0" layoutY="112.0" prefHeight="25.0" prefWidth="15.0" text="₹" textFill="#5ea9bc" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="142.0" prefHeight="20.0" prefWidth="136.0" text="Delivery Charges :">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblBrand" layoutX="15.0" layoutY="190.0" prefHeight="25.0" prefWidth="160.0" text="Product Brand" textFill="#0400eb">
+                     <font>
+                        <Font name="SansSerif Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCategory" contentDisplay="CENTER" layoutX="15.0" layoutY="217.0" prefHeight="16.0" prefWidth="160.0" text="category product">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrderDate" contentDisplay="CENTER" layoutX="100.0" layoutY="62.0" prefHeight="20.0" prefWidth="100.0" text="00/00/0000">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="15.0" layoutY="62.0" prefHeight="20.0" prefWidth="87.0" text="Order Date:">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrderStatus" contentDisplay="CENTER" layoutX="15.0" layoutY="8.0" prefHeight="52.0" prefWidth="250.0" text="Your Order Will Get Delivered Soon" textAlignment="CENTER" textFill="RED" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRating" layoutX="9.0" layoutY="266.0" prefHeight="20.0" prefWidth="45.0" text="rating ">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFeedback" layoutX="16.0" layoutY="240.0" prefHeight="20.0" prefWidth="250.0" text="Thank you for your feedback" textFill="#8a1010">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblQuantity" layoutX="91.0" layoutY="165.0" prefHeight="20.0" prefWidth="118.0" text="quantity">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="paneStar" layoutX="100.0" layoutY="253.0" prefHeight="43.0" prefWidth="150.0">
+                     <children>
+                        <Label fx:id="lbl1Star" onMouseClicked="#click1Star" prefHeight="45.0" prefWidth="30.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="lbl2Star" layoutX="30.0" onMouseClicked="#click2Star" prefHeight="45.0" prefWidth="30.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="lbl3Star" layoutX="60.0" onMouseClicked="#click3Star" prefHeight="45.0" prefWidth="30.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="lbl4Star" layoutX="90.0" onMouseClicked="#click4Star" prefHeight="45.0" prefWidth="30.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="lbl5Star" layoutX="120.0" onMouseClicked="#click5Star" prefHeight="45.0" prefWidth="30.0" text="☆" textFill="#ff8300">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Label fx:id="lblProductTitle" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" prefHeight="108.0" prefWidth="570.0" text="Pikkme OnePlus Nord CE 3 Lite 5G Back Cover | Full Camera Protection | Raised Edges | Super Soft Silicone | Bumper Case for OnePlus Nord CE 3 Lite 5G (Violet) " wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </Label>
+      <HBox fx:id="hboxButtons" prefHeight="50.0" prefWidth="590.0" style="-fx-background-radius: 0 0 10 10;">
+         <children>
+            <Button fx:id="btnWishlist" focusTraversable="false" mnemonicParsing="false" onAction="#AddToWishlistAction" prefHeight="48.0" prefWidth="295.0" style="-fx-background-radius: 0 0 0 10;" text="Save To Wishlist">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/addToWishlist.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAddToCart" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#AddToCartAction" prefHeight="50.0" prefWidth="295.0" style="-fx-background-radius: 0 0 10 0;" text="Buy Again">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/addToCart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
